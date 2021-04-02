@@ -4,6 +4,7 @@
   "description": "Criamos este teste para avaliar seus conhecimentos e habilidades frontend (HTML, CSS e JavaScript).",
   "main": "app.js",
   "dependencies": {
+    "@ionic/angular": "^5.6.3",
     "connect": "~3.6.6",
     "cors": "^2.8.5",
     "serve-static": "~1.13.2"
@@ -17,5 +18,8 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/webjump/assessment-frontend#readme"
+  "homepage": "https://bitbucket.org/webjump/assessment-frontend#readme",
+  "devDependencies": {
+    "@ionic/angular-toolkit": "^3.1.1"
+  }
 }
