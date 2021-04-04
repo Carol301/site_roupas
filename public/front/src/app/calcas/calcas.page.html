@@ -23,13 +23,14 @@
     <div class="conteiner">
       <ion-buttons class="barra" slot="start">
         <ion-button expand="full" href="#">Página Inicial</ion-button>
-        <div *ngFor="let x of dados">
+        <div *ngFor="let x of categorias">
           <ion-button expand="full" href={{x.path}}>{{ x.name }}</ion-button>
         </div>
         <ion-button expand="full" href="#contato">Contato</ion-button>
       </ion-buttons>
     </div>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
@@ -39,7 +40,7 @@
       <div class="barra-lateral-content">
         <ul>
           <li><a href="home">Página Inicial</a></li>
-          <div *ngFor="let x of dados">
+          <div *ngFor="let x of categorias">
             <li><a href={{x.path}}>{{x.name}}</a></li>
           </div>
           <li><a href="contato">Contato</a></li>
@@ -47,27 +48,32 @@
       </div>
     </div>
     <div class="corpo">
-
-      <div class="corpo-gray"></div>
       <div class="corpo-content">
-
-        <h1>Boas Vindas</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-           eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-           nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-            qui officia deserunt mollit anim id est laborum."
-        </p>
+        
+        <h3>{{nomeCategoria}}</h3>
+        
+        <div *ngFor="let x of produtos">
+          <ion-card class="card-produto">
+            <ion-card-header>
+              <ion-img class= "img-produto" src={{imgpath.concat(x.image)}}></ion-img>
+              <ion-card-subtitle>{{x.filter[0]['gender']}}</ion-card-subtitle>
+              <ion-card-title>{{x.name}}</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content>
+              Valor: {{x.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}<br>
+              <strong>{{x.specialPrice ? 'Promoção: ' + x.specialPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) : ''}}</strong>
+            </ion-card-content>
+          </ion-card>
+        </div>
         
       </div>
     </div>
   </div>
 
-</ion-content>
+  <ion-footer class="ion-no-border">
+    <div class="conteiner"><ion-toolbar color="primary"></ion-toolbar></div>
+  </ion-footer>
 
-<ion-footer class="ion-no-border">
-  <div class="conteiner"><ion-toolbar color="primary"></ion-toolbar></div>
-</ion-footer>
+</ion-content>
 

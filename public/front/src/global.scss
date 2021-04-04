@@ -24,3 +24,169 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+$font-family-base: "Open Sans" !default;
+
+body, * {
+    font-family: "Open Sans"; 
+    font-weight: 400;
+}
+
+a {
+    font-family: "Open Sans" !important;
+    font-weight: 900 !important;
+}
+
+.conteiner {
+    width: 900px;
+    display: flex;
+    margin: 0 auto;
+    min-height: 100%;
+}
+
+.barra-login {
+    height: 28px;
+    --min-height: 26px;
+    text-align: right;
+    font-size: 10pt;
+}
+
+.barra-login a {
+  color: white;
+  white-space: nowrap;
+}
+
+.barra-logo {
+    height: 110px;
+    --min-height: 100%;
+    display: block;
+}
+
+.logo {
+    height: 65px;
+    float: left;
+    margin: auto 0;
+}
+
+.space {
+  width: 100%;
+  display: flex;
+}
+
+.pre-span {
+  white-space: pre;
+}
+
+.busca {
+    margin: auto 0;
+    margin-right: 5px;
+    display: flex;   
+}
+
+.busca input[type=text] {
+    width: 300px;
+    border: solid 1px lightgray;
+}
+
+.busca * {
+  height: 35px;
+  margin: 0%;
+  padding: 0%;
+  --box-shadow: none;
+}
+
+.barra-lateral {
+    float: left;
+    width: 25%;
+    padding: 10px 5px 10px 0px;
+    min-height: 100%;
+}
+
+.barra-lateral-content {
+  background-color: lightgray;
+  width: 100%;
+  padding: 10px;
+  min-height: 100%;
+}
+
+.corpo {
+  float: left;
+  width: 75%;
+  padding: 10px 0px 10px 5px;
+  min-height: 100%;
+}
+
+.corpo-gray {
+  background-color: gray;
+  width: 100%;
+  padding: 10px;
+  min-height: 200px;
+}
+
+.corpo-content {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  min-height: 100%;
+}
+
+.img-produto {
+  height: 170px;
+  width: 170px;
+  margin: 0 auto;
+}
+
+ion-card-content strong {
+  color: red;
+}
+
+@media (min-width: 320px) {
+  .conteiner{width: 100%};
+  .card-produto{width: 96%};
+}
+
+@media (min-width: 720px) {
+  .conteiner{width: 100%};
+  .barra ion-button {width: 125px};
+  .barra {width: 100%; margin: 0 20px};
+  .card-produto{width: 46%};
+}
+
+@media (min-width: 900px) {
+  .conteiner{width: 800px;}
+  .barra ion-button {width: 150px};
+  .card-produto{width: 46%};
+}
+
+@media (min-width: 1440px) {
+  .conteiner{width: 1200px;}
+  .barra ion-button {width: 200px};
+  .card-produto{width: 31%};
+}
+
+ion-footer {
+  background-color: white;
+  padding-bottom: 10px;
+  height: 150px;
+}
+
+li > a {
+    color:black;
+    text-decoration: none;
+}
+
+.barra-footer {
+    height: 120px;
+}
+
+.card-produto {
+  float: left;
+  height: 340px;
+}
+
+a:hover, ion-button:hover {
+  color: black;
+}
+
+
+

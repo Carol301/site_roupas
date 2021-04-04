@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class HomePage {
 
   data: string;
+  dados;
 
   constructor(private http: HttpClient) {
 
@@ -22,7 +23,8 @@ export class HomePage {
       .subscribe(
         data => {
           // Set the data to display in the template
-          this.data = JSON.stringify(data);
+          this.dados = data["items"];
+          this.data = JSON.stringify(this.dados);
         }
       );
   }
