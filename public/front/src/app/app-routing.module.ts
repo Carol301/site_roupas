@@ -22,11 +22,7 @@ const routes: Routes = [
   {
     path: 'calcas',
     loadChildren: () => import('./calcas/calcas.module').then( m => m.CalcasPageModule)
-  },
-  {
-    path: 'clear',
-    loadChildren: () => import('./clear/clear.module').then( m => m.ClearPageModule)
-  },
+  }
 ];
 
 @NgModule({
